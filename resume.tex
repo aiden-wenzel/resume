@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{geometry}
 \usepackage{titlesec}
+\usepackage{enumitem}
 
 \geometry{
 	a4paper,
@@ -13,6 +14,30 @@
 }
 
 \newcommand{\class}[2]{\textbf{#1 - #2}:}
+
+\titleformat{\section}
+{\large\bfseries}
+{}
+{0em}
+{}
+
+\titlespacing{\section}
+{0pt}
+{0pt}
+{0pt}
+
+\titleformat{\subsection}
+{\large\bfseries}
+{}
+{0em}
+{}
+
+\titlespacing{\subsection}
+{0pt}
+{0pt}
+{0pt}
+
+\setlist[itemize]{noitemsep}
 
 \begin{document}
 \section{EDUCATION}
