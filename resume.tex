@@ -5,6 +5,7 @@
 \usepackage{titlesec}
 \usepackage{enumitem}
 
+% Margin rules
 \geometry{
 	a4paper,
 	left=0.5in,
@@ -13,8 +14,18 @@
 	top=0.5in,
 }
 
+% Command for class entries.
 \newcommand{\class}[2]{\textbf{#1 - #2}:}
 
+% Custom command for section title
+% Used for bar line and vertical spacing.
+\newcommand{\sectionTitle}[1]{
+	\section{#1}
+	\hrule
+	\vspace{3pt}
+}
+
+% Section format and spacing rules.
 \titleformat{\section}
 {\large\bfseries}
 {}
@@ -26,6 +37,7 @@
 {0pt}
 {0pt}
 
+% Subsection format and spacing rules.
 \titleformat{\subsection}
 {\large\bfseries}
 {}
@@ -37,10 +49,12 @@
 {0pt}
 {0pt}
 
+% Itemize rules.
 \setlist[itemize]{noitemsep}
 
+% Start of document.
 \begin{document}
-\section{EDUCATION}
+\sectionTitle{EDUCATION}
 
 \subsection{University of Michigan}
 \begin{itemize}
@@ -49,7 +63,7 @@
 	\item GPA: 3.45/4.00
 \end{itemize}
 
-\section{PROFESSIONAL EXPERIENCE}
+\sectionTitle{PROFESSIONAL EXPERIENCE}
 
 \subsection{Coretek Services}
 \begin{itemize}
@@ -58,7 +72,7 @@
 	\item Used KQL to query and summarize cloud resource analytics in Azure dashboards.
 \end{itemize}
 
-\section{SKILLS}
+\sectionTitle{SKILLS}
 
 \subsection{Programming Languages}
 C, C++, C\#, Python, MatLab, Verilog HDL, \LaTeX
@@ -72,7 +86,7 @@ Simulink, Waveforms Oscilloscope and Wavegenerator, LtSpice, Modelsim, Jupyter N
 \subsection{UNIX}
 WSL2, Debian, grep, git, cmake, make, tmux, vim, ssh
 
-\section{PROJECTS}
+\sectionTitle{PROJECTS}
 
 \subsection{Fractal Visualizer}
 \begin{itemize}
@@ -94,7 +108,7 @@ WSL2, Debian, grep, git, cmake, make, tmux, vim, ssh
 	and predict what musical instrument is featured in the sample.
 \end{itemize}
 
-\section{RELEVANT COURSE WORK}
+\sectionTitle{RELEVANT COURSE WORK}
 \begin{itemize}
 	\item \class{EECS 281}{Data Structures and Algorithms}
 	\item \class{EECS 370}{Computer Organization}
@@ -104,7 +118,7 @@ WSL2, Debian, grep, git, cmake, make, tmux, vim, ssh
 	\item \class{EECS 270}{Digital Logic Design}
 \end{itemize}
 
-\section{EXTRACURRICULARS}
+\sectionTitle{EXTRACURRICULARS}
 
 \subsection{Michigan Marching Band}
 \begin{itemize}
