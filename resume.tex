@@ -3,7 +3,21 @@
 \usepackage{amsmath}
 \usepackage{geometry}
 \usepackage{titlesec}
+\usepackage{titling}
 \usepackage{enumitem}
+
+\title{Resume}
+\author{Aiden Wenzel}
+
+\renewcommand{\maketitle}{
+	\begin{center}
+		{\huge\bfseries\theauthor}
+		\vspace{0.25em}
+
+		\quad (248)-775-9622 \quad aidenwen@umich.edu \quad linkedin.com/in/aiden-wenzel \quad github.com/aiden-wenzel
+	\end{center}
+}
+
 
 % Prevent indentation.
 \setlength{\parindent}{0pt}
@@ -37,8 +51,8 @@
 
 \titlespacing{\section}
 {0pt} % Left margin
-{3pt} % Before Sep
-{3pt} % After Sep
+{1em} % Before Sep
+{0pt} % After Sep
 
 % Subsection format and spacing rules.
 \titleformat{\subsection}
@@ -49,16 +63,17 @@
 
 \titlespacing{\subsection}
 {0pt} % Left margin
-{3pt} % Before Sep
-{3pt} % After Sep
+{0pt} % Before Sep
+{0pt} % After Sep
 
 % Itemize rules.
 \setlist[itemize]{noitemsep}
 
 % Start of document.
 \begin{document}
-\sectionTitle{EDUCATION}
+\maketitle
 
+\sectionTitle{EDUCATION}
 \subsection{University of Michigan}
 \begin{itemize}
 	\item Major, Electrical Engineering (BSE)
