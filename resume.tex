@@ -5,7 +5,10 @@
 \usepackage{titlesec}
 \usepackage{enumitem}
 
-% Margin rules
+% Prevent indentation.
+\setlength{\parindent}{0pt}
+
+% Set margin rules.
 \geometry{
 	a4paper,
 	left=0.5in,
@@ -33,9 +36,9 @@
 {}
 
 \titlespacing{\section}
-{0pt}
-{0pt}
-{0pt}
+{0pt} % Left margin
+{3pt} % Before Sep
+{3pt} % After Sep
 
 % Subsection format and spacing rules.
 \titleformat{\subsection}
@@ -45,9 +48,9 @@
 {}
 
 \titlespacing{\subsection}
-{0pt}
-{0pt}
-{0pt}
+{0pt} % Left margin
+{3pt} % Before Sep
+{3pt} % After Sep
 
 % Itemize rules.
 \setlist[itemize]{noitemsep}
