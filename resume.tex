@@ -43,11 +43,9 @@
 }
 
 % Command for any position which has a start and end date
-% 1: Name
-% 2: Start date
-% 3: End date
-\newcommand{\position}[3] {
-	\subsection{#1 \hfill \small \normalfont{\textit{#2 - #3}}}
+% \position[job position]{organization}{start date}{end date}
+\newcommand{\position}[4][] {
+	\subsection{#2 \small \normalfont{\textit{#1}\hfill \textit{#3 - #4}}}
 }
 
 % Section format and spacing rules.
@@ -85,9 +83,8 @@
 \maketitle
 
 \sectionTitle{EDUCATION}
-\position{University of Michigan}{September 2023}{May 2027}
+\position[BSE, Electrical Engineering]{University of Michigan}{September 2023}{May 2027}
 \begin{itemize}
-	\item Major, Electrical Engineering (BSE)
 	\item Minor, Computer Science
 	\item GPA: 3.45/4.00
 \end{itemize}
@@ -105,7 +102,7 @@
 
 \sectionTitle{PROFESSIONAL EXPERIENCE}
 
-\position{Coretek Services}{May 2024}{June 2025}
+\position[Technical Support Specialist]{Coretek Services}{May 2024}{June 2025}
 \begin{itemize}
 	\item Worked with HTML, CSS, and C\# to develop intuitive ASP.NET UIs.
 	\item Used C\# APIs to pull cloud resource information from MS Azure and ticket information from ServiceNow.
@@ -141,7 +138,7 @@
 \end{itemize}
 
 \sectionTitle{EXTRACURRICULARS}
-\position{Michigan Marching Band}{August 2023}{December 2026}
+\position[Piccolo]{Michigan Marching Band}{August 2023}{December 2026}
 \begin{itemize}
 	\item Dedicated approximately 20 hours each week to rehearsals and performances in the Big House.
 	\item Performed at the 2023 Big Ten Championship and 2024 ReliQuest Bowl. 
