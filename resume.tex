@@ -42,6 +42,14 @@
 	\vspace{3pt}
 }
 
+% Command for any position which has a start and end date
+% 1: Name
+% 2: Start date
+% 3: End date
+\newcommand{\position}[3] {
+	\subsection{#1 \hfill \small \normalfont{\textit{#2 - #3}}}
+}
+
 % Section format and spacing rules.
 \titleformat{\section}
 {\large\bfseries}
@@ -77,7 +85,7 @@
 \maketitle
 
 \sectionTitle{EDUCATION}
-\subsection{University of Michigan}
+\position{University of Michigan}{September 2023}{May 2027}
 \begin{itemize}
 	\item Major, Electrical Engineering (BSE)
 	\item Minor, Computer Science
@@ -97,7 +105,7 @@
 
 \sectionTitle{PROFESSIONAL EXPERIENCE}
 
-\subsection{Coretek Services}
+\position{Coretek Services}{May 2024}{June 2025}
 \begin{itemize}
 	\item Worked with HTML, CSS, and C\# to develop intuitive ASP.NET UIs.
 	\item Used C\# APIs to pull cloud resource information from MS Azure and ticket information from ServiceNow.
@@ -133,7 +141,7 @@
 \end{itemize}
 
 \sectionTitle{EXTRACURRICULARS}
-\subsection{Michigan Marching Band}
+\position{Michigan Marching Band}{August 2023}{December 2026}
 \begin{itemize}
 	\item Dedicated approximately 20 hours each week to rehearsals and performances in the Big House.
 	\item Performed at the 2023 Big Ten Championship and 2024 ReliQuest Bowl. 
