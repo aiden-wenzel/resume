@@ -3,9 +3,26 @@
 \usepackage{amsmath}
 \usepackage{geometry}
 \usepackage{titlesec}
+\usepackage{titling}
 \usepackage{enumitem}
-\usepackage{listings}
 
+\title{Resume}
+\author{Aiden Wenzel}
+
+\renewcommand{\maketitle}{
+	\begin{center}
+		{\huge\bfseries\theauthor}
+		\vspace{0.25em}
+
+		\quad (248)-775-9622 \quad aidenwen@umich.edu \quad linkedin.com/in/aiden-wenzel \quad github.com/aiden-wenzel
+	\end{center}
+}
+
+
+% Prevent indentation.
+\setlength{\parindent}{0pt}
+
+% Set margin rules.
 \geometry{
 	a4paper,
 	left=0.5in,
@@ -14,112 +31,117 @@
 	top=0.5in,
 }
 
-\titlespacing{\section}
-{0pt} %left
-{0pt} % before sep
-{0pt} % after sep
+% Command for class entries.
+\newcommand{\class}[1]{\textbf{#1}:}
 
-\titlespacing{\subsection}
-{0pt}
-{0pt}
-{0pt}
-
-\newcommand{\resumeEntry}[3]{%
-	\noindent\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr}
-		\large{\textbf{#1}} \small{\textit{#2}} & \large{#3} \\
-	\end{tabular*}\vspace{-5pt}
+% Custom command for section title
+% Used for bar line and vertical spacing.
+\newcommand{\sectionTitle}[1]{
+	\section{#1}
+	\hrule
+	\vspace{3pt}
 }
 
+% Command for any position which has a start and end date
+% \position[job position]{organization}{start date}{end date}
+\newcommand{\position}[4][] {
+	\subsection{#2 \small \normalfont{\textit{#1}\hfill \textit{#3 - #4}}}
+}
+
+% Section format and spacing rules.
+\titleformat{\section}
+{\large\bfseries}
+{}
+{0em}
+{}
+
+\titlespacing{\section}
+{0pt} % Left margin
+{1em} % Before Sep
+{0pt} % After Sep
+
+% Subsection format and spacing rules.
+\titleformat{\subsection}
+{\large\bfseries}
+{}
+{0em}
+{}
+
+\titlespacing{\subsection}
+{0pt} % Left margin
+{0pt} % Before Sep
+{0pt} % After Sep
+
+% Itemize rules.
+\setlist[itemize]{nosep}
+
+% Remove page numbers.
+\pagenumbering{gobble}
+
+% Start of document.
 \begin{document}
-\thispagestyle{empty}
-\begin{center}
-	\textbf{\huge{Aiden Wenzel}}
-	\vspace{3pt}
-	
-	Ann Arbor, MI \hspace{5pt} (248)-775-9622 \hspace{5pt} aidenwen@umich.edu \hspace{5pt} github.com/aiden-wenzel
-\end{center}
+\maketitle
 
-\section*{Education}
-\hrule
-\vspace{3pt}
-
-\resumeEntry{University of Michigan}{Electrical Engineering, BSE}{September 2023 - May 2027}
-\begin{itemize}[noitemsep]
-	\item GPA: $3.45/4.00$
-	\item Minor, Computer Science and Music
+\sectionTitle{EDUCATION}
+\position[BSE, Electrical Engineering]{University of Michigan}{September 2023}{May 2027}
+\begin{itemize}
+	\item Computer Science Minor
+	\item GPA: 3.45/4.00
 \end{itemize}
 
-\section*{Experience}
-\hrule
-\vspace{3pt}
+\sectionTitle{RELEVANT COURSE WORK}
+\begin{itemize}
+	\item \class{Signals and Systems} Studied mathematical concepts such as LTI systems, convolution, Fourier series and transform, Laplace transform, sampling, and control systems. Labs included designing filters, an envelope detector, and a mock AM radio on breadboards, as well as simulating control systems in Simulink.
+	\item \class{Electrical Engineering System Design} Built an autonomous robot with a team of three other engineering students. Project involved implementing odometry, motor controls, acoustic range finding, thermal sensors, and OpenCV image processing to control the robot's movement.
+	\item \class{Introduction to Circuits} Studied analog circuits. Topics included nodal analysis, diodes, op amps, MOSFET transistors, RLC circuits, AC circuits, and filters.
+	\item \class{Computer Organization} Studied assembly-style languages and how they are assembled into machine code. Second half of class focused on single and multicycle datapaths, pipelined processors, caches, and virtual memory. Projects included building a simple assembler, linker, pipeline simulator, and cache simulator.
+	\item \class{Digital Logic Design} Studied combinational circuits such as multiplexers, adders, decoders, and encoders and sequential circuits such as D flip-flops, registers, multipliers, and counters. Investigated optimization and analysis techniques through timing analysis, two-level logic minimization, and state minimization. Projects involved using Modelsim and Verilog to model a trafic light controller, combinational, and sequential calculator on an FPGA.
+	\item \class{Data Structures and Algorithms} Studied data structures such as stacks, queues, trees, heaps, hashtables, sets, directed, and undirected graphs. Utilized algorithms such as DFS, BFS, quicksort, merge sort, heapsort, Prim's algorithm, Dijkstra's algorithm, and various DP algorithms. Projects utilized C++ STL and involved extensive optimizations using complexity analysis, Perf profiling, and Valgrind memory checker.
+\end{itemize}
 
-\resumeEntry{Coretek}{Technical Support Specialist}{May 2024 - July 2025}
-\begin{itemize}[noitemsep]
+
+\sectionTitle{PROFESSIONAL EXPERIENCE}
+
+\position[Technical Support Specialist]{Coretek Services}{May 2024}{June 2025}
+\begin{itemize}
 	\item Worked with HTML, CSS, and C\# to develop intuitive ASP.NET UIs.
 	\item Used C\# APIs to pull cloud resource information from MS Azure and ticket information from ServiceNow.
 	\item Used KQL to query and summarize cloud resource analytics in Azure dashboards.
 \end{itemize}
 
-\section*{Skills}
-\hrule
-\vspace{3pt}
-
-\resumeEntry{Programming}{}{}
-\begin{itemize}[noitemsep]
-	\item Matlab: Organized data, processed images, and plotted data.
-	\item C++: Substantial knowledge of STL. Implemented numerous algorithms and data structures from scratch.
-	\item C: Programmed embedded control systems for autonomous robots.
-	\item Python: Built deep learning models with PyTorch and processed data with Pandas, NumPy, and Matplotlib.
-	\item \LaTeX: Wrote elegant, concise lab reports and homework assignments.
+\sectionTitle{SKILLS}
+\begin{itemize}
+	\item \textbf{Programming Languages}: C, C++, Python, Lua, MATLAB, Verilog HDL, \LaTeX. 
+	\item \textbf{Linux}: Debian, WSL2, grep, cmake, make, tmux, vim, ssh.
+	\item \textbf{Software}: Simulink, Waveforms Oscilloscope, LtSpice, Modelsim, Jupyter Notebooks.
 \end{itemize}
 
-\resumeEntry{Unix}{}{}
-\begin{itemize}[noitemsep]
-	\item Worked with Debian-based Linux distributions such as Ubuntu and Mint.
-	\item Familiar with terminal-based text editing using vim.
-	\item Experience with basic terminal utilities such as \lstinline{grep}, \lstinline{git}, \lstinline{make}, and \lstinline{tmux}.
-\end{itemize}
-
-\resumeEntry{Circuit Analysis}{}{}
-\begin{itemize}[noitemsep]
-	\item Waveforms: Analyzed analog signals in AC and DC circuits with an Oscilloscope.	
-	\item LTspice: Simulated analog circuits.
-	\item Logisim: Simulated digital logic circuits.
-	\item ModelSim: Simulated digital logic circuits using Verilog HDL.
-\end{itemize}
-
-\section*{Projects}
-\hrule
-\vspace{3pt}
-\resumeEntry{Fractal Visualizer}{C++}{}
-\begin{itemize}[noitemsep]
+\sectionTitle{PROJECTS}
+\subsection{Fractal Visualizer}
+\begin{itemize}
     \item Utilized OpenGL APIs to accurately visualize the Mandelbrot set and Julia sets.
-    \item Implemented custom panning and zoom functionality for near-infinite zooming into complex geometries.
+	\item Implemented custom panning and zoom functionality for near-infinite zooming into complex geometries.
 \end{itemize}
 
-\resumeEntry{Conway's Game of Life}{C++}{}
-\begin{itemize}[noitemsep]
+\subsection{Conway's Game of Life}
+\begin{itemize}
 	\item Wrote custom implementation of Conway's Game of Life using SDL.
 	\item Customized build system and dependency management with CMake.
 \end{itemize}
 
-\resumeEntry{Instrument Recognition Software}{Python}{}
-\begin{itemize}[noitemsep]
+\subsection{Instrument Recognition Software}
+\begin{itemize}
 	\item Worked with a team of 3 other engineering students to build an instrument recognition app.
 	\item Input audio data would be processed using the Librosa library. Harmonic overtones in audio samples would be extracted using the FFT algorithm.
 	\item Processed audio data would be used to train a CNN which would take audio files as input, process them,
 	and predict what musical instrument is featured in the sample.
 \end{itemize}
 
-\section*{Extracurriculars}
-\hrule
-\vspace{3pt}
-
-\resumeEntry{Michigan Marching Band}{Piccolo}{}
-\begin{itemize}[noitemsep]
+\sectionTitle{EXTRACURRICULARS}
+\position[Piccolo]{Michigan Marching Band}{August 2023}{December 2026}
+\begin{itemize}
 	\item Dedicated approximately 20 hours each week to rehearsals and performances in the Big House.
-	\item Performed at the Big Ten Championship against the University of Iowa 2023,
-		and the ReliQuest Bowl against the University of Alabama in 2024.
+	\item Performed at the 2023 Big Ten Championship, 2024 ReliQuest Bowl, and 2025 Citrus Bowl. 
 	\item Initiated as an official brother of Kappa Kappa Psi ($KK\Psi$), the National Honorary Band Fraternity.
     \item Performed with the Michigan Hockey Band at Yost Ice Arena.
 \end{itemize}
