@@ -1,0 +1,11 @@
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\QInitiated as an official brother of Kappa Kappa Psi (\\E(?:Dummy|Ina|Jimmy-|Dummy-|Maniquí-|Maniquíes-|Atrapa-|Dummy\\+|Dummy's\\+)[0-9]+\\Q), the National Honorary Band Fraternity.\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\QInitiated as an official brother of Kappa Kappa Psi (\\E(?:Dummy|Ina|Jimmy-|Dummy-|Maniquí-|Maniquíes-|Atrapa-|Dummy\\+|Dummy's\\+)[0-9]+\\Q), the National Honorary Band Fraternity.\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QSeptember 2023.\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QMay 2027.\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QMay 2024.\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QJune 2025.\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Q[Student]MRI Reconstruction Lab.Dec 2026.\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QPresent.\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QSep 2026.\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QAugust 2023.\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QDecember 2026.\\E$"}
